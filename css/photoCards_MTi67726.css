@@ -1,0 +1,81 @@
+/* * {
+  color: snow;
+} */
+
+section {
+  background-color: snow; 
+}
+
+
+.row{
+  width: 80%;
+  margin: 0px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.image {
+  height: 400px;
+  max-width: 350px;
+  margin: 50px;
+  overflow: hidden;
+  box-shadow: 5px 5px 20px black;
+  border-radius: 10px;
+}
+
+.image > img {
+  object-fit: cover;
+  object-position: center;
+  height: 100%;
+  width: 100%;
+  opacity: 0.95;
+  position: relative;
+  vertical-align: top;
+  transition: 0.3s;
+  transition-property: opacity;
+  border-radius: 10px;
+}
+
+.image > img:hover {
+  opacity: 1;
+
+}
+
+.image .details {
+  background-color: rgba(27, 27, 27, 0.5);
+  height: 70px;
+  width: 350px;
+  padding: 6px;
+  position: relative;
+  bottom: 70px;
+  border-radius: 0px 0px 10px 10px;
+  transition: 0.5s;
+  transition-property: bottom height;
+}
+
+.image .details > * {
+  color: snow;
+}
+
+.image .details h2 {
+  margin: 5px 40px;
+  font-size: xx-large;
+  text-transform: uppercase;
+  transition: 0.5 s;
+  transition-property: transform;
+}
+
+.image:hover .details p {
+  opacity: 1;
+}
+
+.image:hover .details {
+  height: 250px;
+  bottom: 250px;
+}
+
+.image .details p {
+  margin: 0px 40px;
+  opacity: 0;
+}

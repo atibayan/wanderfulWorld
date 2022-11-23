@@ -1,0 +1,100 @@
+#commentContainer {
+  display: grid;
+  gap: 1.5rem;
+  padding-block: 2rem;
+  width: min(95%, 70rem);
+  margin-inline: auto;
+
+  /* grid-auto-columns: 1fr;
+  /* grid-template-areas:
+   'grid4 grid3 grid3'
+   'grid4 grid6 grid6'
+   'grid1 grid1 grid2'
+   'grid5 grid5 grid2' */
+
+   grid-template-columns: 1fr 1fr 1fr;
+   grid-template-rows: auto;
+   grid-auto-flow: dense;
+}
+
+.comment {
+  /* font-size: var(--fs-400); */
+  padding: 2rem;
+  border-radius: 0.5rem;
+  position: relative;
+  /* box-shadow: 2.5rem 3.75rem 3rem -3rem hsl(var(--clr-secondary-400) / 0.25); */
+}
+
+.comment > p:first-child{
+  font-size: 5em;
+  position: absolute;
+  top: 0;
+  right: 0;
+  opacity: 0.4;
+}
+
+
+fieldset {
+  margin: 10px 30%;
+  padding: 10px 30px;
+  background-color: #F7F6CF;
+  border-radius: 20px;
+}
+
+legend {
+  font-size: larger;
+  background-color: #B6D8F2;
+  border: 2px solid black;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+fieldset > div {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+fieldset > div > * {
+  margin: 10px 0px;
+  flex: 1 1 245px;
+  font-size: medium;
+}
+
+div > label:first-child{
+  text-align: right;
+  padding-right: 30px;
+  font-weight: bold;
+  flex: 1 1 50px;
+}
+
+input[type='submit'] {
+  display: block;
+  margin: 10px auto 0px;
+  padding: 5px 50px;
+  border: 2px solid black;
+  font-size: large;
+}
+
+.emoji > label {
+  display: inline-block;
+  font-size: x-large;
+  margin-right: 20px;
+  transition: 0.3s;
+}
+
+.emoji {
+  min-height: 3em;
+}
+
+.emoji > label:hover {
+  transform: translateY(-15px);
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+#emoji7 {
+  border: 2px solid black;
+
+}
