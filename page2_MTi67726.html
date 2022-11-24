@@ -5,22 +5,31 @@
     <meta charset="utf-8">
     <title>WhatAWanderfulWorld</title>
     <link rel="stylesheet" href="css/styles_MTi67726.css">
+    <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/slider_MTi67726.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poor+Story&display=swap" rel="stylesheet">
     <script src="script/constants.js"></script>
     <script src="script/page1.js"></script>
+    <script src="script/navbar.js"></script>
   </head>
   <body>
     <header>
-      <h1><a href="index.html"><span class="wander">W</span>anderful<span class="wander">W</span>orld</a></h1>
-      <nav>
-        <ul>
-          <li><a href="page2_MTi67726.html">surprise me</a></li>
-          <li><a href="page3_MTi67726.html">let me browse first</a></li>
-          <li><a href="page4_MTi67726.html">suggest</a></li>
-        </ul>
+      <nav class="navbar">
+        <h1 class="logo"><a href="index.html"><span class="wander">W</span>anderful<span class="wander">W</span>orld</a></h1>
+        <a href="#" class="toggle-button" onclick="myFunction()">
+          <span class="burger"></span>
+          <span class="burger"></span>
+          <span class="burger"></span>
+        </a>
+          <div class="navbar-links">
+          <ul>
+            <li><a href="page2_MTi67726.html">Discover</a></li>
+            <li><a href="page3_MTi67726.html">Browse</a></li>
+            <li><a href="page4_MTi67726.html">Read Stories</a></li>
+          </ul>
+        </div>
       </nav>
     </header>
     <section>
