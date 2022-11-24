@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poor+Story&display=swap" rel="stylesheet">
     <script src="script/page4.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
   <body>
     <header>
@@ -31,13 +32,14 @@
             <input type="text" name="fname" id="fname" placeholder="John Doe" required>
           </div>
           <div>
-            <label for="countries">Which country did you visit?</label>
-            <select name="countries" id="countries" required>
+            <label for="country">Which country did you visit?</label>
+            <select name="country" id="country" required>
             </select>
           </div>
           <div>
             <label for="rate1">How would your rate your experience?<br>
-              <label for="rate7" id="emoji7">&#128513;&#128513;&#128513;&#128513;&#128513;</label></label>
+              <label for="rate7" id="emoji7">&#128513;&#128513;&#128513;&#128513;&#128513;</label>
+            </label>
             <span class="emoji">
               <label for="rate1" id="emoji1">&#128513;</label>
               <label for="rate2" id="emoji2">&#128525;</label>
@@ -45,49 +47,27 @@
               <label for="rate4" id="emoji4">&#129304;</label>
               <label for="rate5" id="emoji5">&#128533;</label>
               <label for="rate6" id="emoji6">&#128545;</label>
+              <span class="hidden">
+                <input type="radio" name="rate" id="rate1" value="superb!">
+                <input type="radio" name="rate" id="rate2" value="loveit!">
+                <input type="radio" name="rate" id="rate3" value="pricey!">
+                <input type="radio" name="rate" id="rate4" value="it rocks!">
+                <input type="radio" name="rate" id="rate5" value="meh!">
+                <input type="radio" name="rate" id="rate6" value="dontgo!" required>
+              </span>
             </span>
           </div>
           <div>
-            <label for="comment">Tell us more about your experience (70 - 100 words)</label>
-            <textarea name="comment" id="comment" cols="30" rows="3"></textarea>
+            <label for="story">Tell us more about your experience (50 - 100 words)</label>
+            <textarea name="story" id="story" cols="30" rows="3" required></textarea>
           </div>
-          <input type="submit" value="Submit" onclick="addComment(this.form)">
+          <div>
+            <input type="submit" value="Submit" onclick="addComment(this.form)">
+            <input type="reset" value="Clear">
+          </div>
         </fieldset>
-        <span class="hidden">
-          <input type="radio" name="rate" id="rate1" value="superb!" required>
-          <input type="radio" name="rate" id="rate2" value="loveit!">
-          <input type="radio" name="rate" id="rate3" value="pricey!">
-          <input type="radio" name="rate" id="rate4" value="it rocks!">
-          <input type="radio" name="rate" id="rate5" value="meh!">
-          <input type="radio" name="rate" id="rate6" value="dontgo!">
-        </span>
       </form>
       <section id="commentContainer">
-        <article class="comment">
-          <p>&#128513;</p>
-          
-          <p>1Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
-        </article>
-        <article class="comment">
-          <p>&#128513;</p>
-          <p>2Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
-        </article>
-        <article class="comment">
-          <p>&#128513;</p>
-          <p>3Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
-        </article>
-        <article class="comment">
-          <p>&#128513;</p>
-          <p>4Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
-        </article>
-        <article class="comment">
-          <p>&#128513;</p>
-          <p>5Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
-        </article>
-        <article class="comment">
-          <p>&#128513;</p>
-          <p>6Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
-        </article>
       </section>
     </section>
     <footer>
