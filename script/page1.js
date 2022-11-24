@@ -91,8 +91,8 @@ function createImageSlider(){
     });
     navigationDiv.append(label);
   }
-  document.getElementById('labelRadio' + activeSlide).style.backgroundColor = '#ffffff';
-  document.getElementById('labelRadio' + activeSlide).style.border = '#ffffff50';
+  document.getElementById('labelRadio' + activeSlide).style.backgroundColor = colors.colorLightAccent;
+  document.getElementById('labelRadio' + activeSlide).style.border = '2px solid ' + colors.colorDark;
 }
 
 function changeSlide(){
@@ -106,9 +106,9 @@ function changeSlide(){
 function formatSliderNavigation(){
   document.getElementById('radio' + activeSlide).checked = true;
   document.querySelectorAll('.sliderBtn').forEach(btn=>{
-    btn.style.backgroundColor = '#646464';
-    btn.style.border = '2px solid #ffffff';
+    btn.style.backgroundColor = colors.colorDarkAccent;
+    btn.style.border = '2px solid ' + colors.colorDark;
   });
-  document.getElementById('labelRadio' + activeSlide).style.backgroundColor = '#ffffff';
-  document.getElementById('labelRadio' + activeSlide).style.border = '#ffffff50';
+  document.getElementById('labelRadio' + activeSlide).style.backgroundColor = colors.colorLightAccent;
+  document.getElementById('labelRadio' + activeSlide).style.border = '2px solid ' + colors.colorDark;
 }

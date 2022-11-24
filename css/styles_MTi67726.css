@@ -2,12 +2,17 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  color: #0e152e;
   font-family: 'Poor Story', sans-serif;
-
+  color: var(--color-light);
 
   --slider-width: 800px;
   --slider-height: 500px;
+
+  --color-light: #C5C6C7;
+  --color-laccent: #66FCF1;
+  --color-maccent: #45A29E;
+  --color-daccent: #1F2833;
+  --color-dark: #0B0C10;
 }
 
 header {
@@ -16,7 +21,7 @@ header {
   /* flex-flow: row wrap; */
   padding: 10px 10%;;
   align-items: center;
-  background-color: #f3eaea;
+  background-color: var(--color-daccent);
   grid-row: 1;
 }
 
@@ -24,7 +29,8 @@ body {
   display: grid;
   height: 100vh;
   grid-template-rows: 5% 1fr 5%;
-  color: #0e152e;
+  color: var(--color-light);
+  background-color: var(--color-dark);
 }
 
 header > h1 > a {
@@ -45,11 +51,11 @@ nav > ul > li > a {
 }
 
 nav > ul > li > a:hover {
-  color: #d66b00;
+  color: var(--color-laccent);
 }
 
 .hero {
-  background: linear-gradient(transparent, rgba(255, 255, 255, 0.3), transparent),
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2)),
       url('../images/bg/paris_arc.JPG');
   background-position: bottom;
   background-size: cover;
@@ -57,48 +63,78 @@ nav > ul > li > a:hover {
   height: 90vh;
   display: flex;
   justify-content: left;
-  align-items: center;
+  align-items: flex-end;
   grid-row: 2;
 }
 
 .hero-inner {
   padding: 0 1.5rem;
+  margin-left: 5%;
+}
+
+.hero-inner > p,
+.hero-inner > * > * {
+  color: var(--color-daccent);
+  font-weight: bold;
 }
 
 .hero-headline {
   margin: 0;
-  font-size: 4em;
+  font-size: 10em;
 }
 
 h2 {
-  margin: 0;
+  margin: 1em 0px;
   font-size: 1.2rem;
+  color: var(--color-daccent);
+  display: block;
+  width: 90%;
 }
 
 .wander {
-  color: #a75300;
+  color: var(--color-laccent);
 }
 
-section {
-  background-color: #0e152e;
+h1 > .wander {
+  color: var(--color-daccent);
 }
 
 section > h1 {
   font-size: 5rem;
-  color: #f3eaea;
   text-align: center;
 }
 
 section > p {
   margin: 20px auto;
   width: 50%;
-  color: #f3eaea;
 }
 
 footer {
   text-align: center;
-  color: #f3eaea;
-  background-color: #0e152e;
+  background-color: var(--color-daccent);
   padding: 10px;
   grid-row: 3;
+}
+
+
+/* LAYOUT IN TABLETS */
+@media only screen and (min-width: 768px){
+  .hero-headline {
+    font-size: 7em;
+  }
+  
+}
+
+/* LAYOUT IN SEMI WIDE OR DESKTOP */
+@media only screen and (min-width: 889px){
+  .hero-headline {
+    font-size: 5em;
+  }
+}
+
+/* LAYOUT IN WIDE SCREEN */
+@media only screen and (min-width: 1200px) {
+  .hero-headline {
+    font-size: 4em;
+  }
 }

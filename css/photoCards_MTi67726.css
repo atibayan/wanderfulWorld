@@ -1,24 +1,16 @@
-/* * {
-  color: snow;
-} */
-
-section {
-  background-color: snow; 
-}
-
-
-.row{
-  width: 80%;
+.row {
+  width: 100%;
   margin: 0px auto;
   display: flex;
-  flex-wrap: wrap;
+  flex-flow: row wrap;
   justify-content: center;
 }
 
 .image {
-  height: 400px;
-  max-width: 350px;
-  margin: 50px;
+  height: auto;
+  width: 100%;
+  max-width: 100%;
+  margin: 20px;
   overflow: hidden;
   box-shadow: 5px 5px 20px black;
   border-radius: 10px;
@@ -37,45 +29,90 @@ section {
   border-radius: 10px;
 }
 
+
 .image > img:hover {
   opacity: 1;
-
 }
 
 .image .details {
-  background-color: rgba(27, 27, 27, 0.5);
-  height: 70px;
-  width: 350px;
-  padding: 6px;
+  background-color: var(--color-dark);
+  /* background-color: rgba(27, 27, 27, 0.5); */
+  height: 15%;
+  width: 100%;
+  padding: 10px;
   position: relative;
-  bottom: 70px;
-  border-radius: 0px 0px 10px 10px;
+  bottom: 15%;
+  /* border-radius: 0px 0px 10px 10px; */
   transition: 0.5s;
   transition-property: bottom height;
 }
 
+.image:hover .details {
+  height: 50%;
+  bottom: 50%;
+  opacity: 0.95;
+}
+
 .image .details > * {
-  color: snow;
+  font-size: 2.5rem;
 }
 
 .image .details h2 {
   margin: 5px 40px;
-  font-size: xx-large;
+  font-size: 5em;
   text-transform: uppercase;
   transition: 0.5 s;
   transition-property: transform;
+  color: var(--color-maccent)
 }
 
 .image:hover .details p {
   opacity: 1;
 }
 
-.image:hover .details {
-  height: 250px;
-  bottom: 250px;
-}
-
 .image .details p {
   margin: 0px 40px;
   opacity: 0;
+}
+
+
+/* LAYOUT IN TABLETS */
+@media only screen and (min-width: 768px){
+
+}
+
+/* LAYOUT IN SEMI WIDE OR DESKTOP */
+@media only screen and (min-width: 889px){
+
+}
+
+/* LAYOUT IN WIDE SCREEN */
+@media only screen and (min-width: 1200px) {
+  .row {
+    width: 80%;
+  }
+
+  .image {
+    height: 400px;
+    max-width: 350px;
+  }
+
+  .image .details {
+    height: 70px;
+    width: 350px;
+    bottom: 70px;
+  }
+
+  .image:hover .details {
+    height: 250px;
+    bottom: 250px;
+  }
+
+  .image .details > * {
+    font-size: 1em;
+  }
+
+  .image .details h2 {
+    font-size: 2em;
+  }
 }

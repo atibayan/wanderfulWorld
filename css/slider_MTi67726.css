@@ -1,4 +1,6 @@
-
+#page1_h1{
+  color: var(--color-laccent);
+}
 
 #slider {
   display: block;
@@ -31,26 +33,21 @@
 #navigation {
   position: manual;
   width: var(--slider-width);
-  margin-top: -15px;
+  margin-top: -25px;
   display: flex;
   justify-content: center;
 }
 
 .sliderBtn {
-  border: 2px solid #ffffff;
-  background-color: #646464;
-  padding: 5px 30px;
+  border: 2px solid var(--color-dark);
+  background-color: var(--color-daccent);
+  padding: 10px 10px;
   cursor: pointer;
-  transition: 1s;
+  transition: 0.3s;
 }
 
 .sliderBtn:not(:last-child){
   margin-right: 10px;
-}
-
-.sliderBtn:hover {
-
-  background-color: #0e152e;
 }
 
 #radio1:checked ~ .first {
