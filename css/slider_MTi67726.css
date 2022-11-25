@@ -1,5 +1,22 @@
 #page1_h1{
   color: var(--color-laccent);
+  font-size: var(--fs-l);
+  margin-top: 10px;
+}
+
+#containerOfAll{
+  width: 100%;
+  margin: var(--fs-m) auto;
+  padding: var(--fs-s) var(--fs-m);
+}
+
+.biggest{
+  font-size: var(--fs-xl); 
+}
+
+.bigger{
+  font-size: var(--fs-l);
+  color: var(--color-maccent);
 }
 
 #slider {
@@ -7,7 +24,7 @@
   margin: 0px auto;
   width: var(--slider-width);
   height: var(--slider-height);
-  border-radius: 20px;
+  border-radius: 5px;
   overflow: hidden;
 }
 
@@ -31,16 +48,20 @@
 }
 
 #navigation {
-  position: manual;
-  width: var(--slider-width);
-  margin-top: -25px;
   display: flex;
   justify-content: center;
+  position: relative;
+  width: 40%;
+  margin: 0 auto;
+  bottom: 40px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  padding: 10px;
 }
 
 .sliderBtn {
-  border: 2px solid var(--color-dark);
   background-color: var(--color-daccent);
+  opacity: 0.9;
   padding: 7px;
   cursor: pointer;
   transition: 0.3s ease-in;
@@ -89,4 +110,30 @@
 
 #radio10:checked ~ .first {
   margin-left: calc(var(--slider-width) * -9);
+}
+
+
+/* LAYOUT IN TABLETS */
+@media only screen and (min-width: 768px){
+  #containerOfAll{
+    width: 80%;
+  }
+}
+
+/* LAYOUT IN SEMI WIDE OR DESKTOP */
+@media only screen and (min-width: 889px){
+
+}
+
+/* LAYOUT IN WIDE SCREEN */
+@media only screen and (min-width: 1200px) {
+
+  #sliderContainer{
+    float: left;
+    margin-right: 20px;
+  }
+
+  #containerOfAll{
+    width: 50%;
+  }
 }

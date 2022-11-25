@@ -41,6 +41,11 @@
   background-color: var(--color-dark);
 }
 
+.navlinkbtn[aria-current="page"] {
+  text-decoration: underline wavy var(--color-laccent) 2px;
+  text-underline-offset: 10px;
+}
+
 .toggle-button {
   position: absolute;
   top: 0.3rem;

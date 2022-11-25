@@ -12,8 +12,9 @@
   max-width: 100%;
   margin: 20px;
   overflow: hidden;
-  box-shadow: 5px 5px 20px black;
-  border-radius: 10px;
+  /* box-shadow: 5px 5px 10px var(--color-light); */
+  /* border: 5px solid var(--color-daccent); */
+  border-radius: 5px;
 }
 
 .image > img {
@@ -21,23 +22,22 @@
   object-position: center;
   height: 100%;
   width: 100%;
-  opacity: 0.95;
+  opacity: 1;
   position: relative;
   vertical-align: top;
   transition: 0.3s;
   transition-property: opacity;
-  border-radius: 10px;
 }
 
 .image > img:hover {
-  opacity: 1;
+  opacity: 0.8;
 }
 
 .image .details {
   background-color: var(--color-dark);
   height: 15%;
   width: 100%;
-  padding: 10px;
+  padding: 5px 10px;
   position: relative;
   bottom: 15%;
   transition: 0.5s;
@@ -45,22 +45,18 @@
 }
 
 .image:hover .details {
-  height: 50%;
-  bottom: 50%;
+  height: 45%;
+  bottom: 45%;
   opacity: 0.95;
 }
 
-.image .details > * {
-  font-size: var(--fs-s);
-}
-
 .image .details h2 {
-  margin: 5px 40px;
+  margin: 0px var(--p-l);
   font-size: var(--fs-m);
   text-transform: uppercase;
   transition: 0.5 s;
   transition-property: transform;
-  color: var(--color-maccent)
+  color: var(--color-laccent)
 }
 
 .image:hover .details p {
@@ -68,7 +64,7 @@
 }
 
 .image .details p {
-  margin: 0px 40px;
+  margin: 0px var(--p-l);
   opacity: 0;
 }
 

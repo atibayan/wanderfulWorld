@@ -41,13 +41,11 @@ function formatClickEmoji(){
     if (radios[i].checked)
     {
       document.getElementById('emoji'+(i+1)).style.transform = 'translateY(10%)';
-      // document.getElementById('emoji'+(i+1)).style.cursor = 'pointer';
       document.getElementById('emoji7').innerText = radios[i].value.toUpperCase();
     }
     else
     {
       document.getElementById('emoji'+(i+1)).style.transform = 'translateY(50%)';
-      // document.getElementById('emoji'+(i+1)).style.cursor = 'pointer';
     }
   }
 }
@@ -181,8 +179,13 @@ function validateStory(form){
 
 function styleComments(){
   let comments = document.querySelectorAll('.comment');
-  for(let comment of comments){
-    comment.style.border = '1px solid ' + colors.colorLightAccent;
+  for(let i = 0; i < comments.length; i++){
+    if(i == 0)
+      comments[i].style.backgroundColor = colors.colorDarkAccent;
+    else{
+      comments[i].style.backgroundColor = 'unset';
+      comments[i].style.border = '4px solid ' + colors.colorDarkAccent;
+    }
   }
 }
 

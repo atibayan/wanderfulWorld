@@ -2,7 +2,7 @@ var targetCountry;
 var picCount;
 var imageInterval;
 var activeSlide = 1;
-var sliderWidth = 800;
+var sliderWidth = 600;
 
 window.addEventListener('DOMContentLoaded', function(){
   //let countries = ['thailand', 'paris', 'japan', 'spain', 'austria'];
@@ -16,33 +16,32 @@ window.addEventListener('DOMContentLoaded', function(){
   let header = this.document.getElementById('page1_h1');
   header.innerText = targetCountry.toUpperCase();
 
-  // let desc = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. " + 
-  //             "Duis pretium porta purus, non sagittis neque ultrices at. " + 
-  //             "Quisque venenatis orci nibh, ac sollicitudin justo mollis vitae. " + 
-  //             "Maecenas nec risus arcu. Vestibulum nulla tellus, blandit in " + 
-  //             "hendrerit id, facilisis nec nisl. In odio quam, lacinia sed " + 
-  //             "turpis sed, vehicula auctor est. Aliquam sed congue arcu, sit " + 
-  //             "amet varius orci. Fusce porttitor vitae sem vel iaculis. Fusce " + 
-  //             "elementum ipsum et consectetur scelerisque. Nulla tincidunt " + 
-  //             "pellentesque nisl, a vestibulum neque condimentum eu. Donec " + 
-  //             "purus lectus, tristique vel consectetur quis, eleifend nec velit. " + 
-  //             "Mauris tempor mattis neque, vel imperdiet erat. Vestibulum a " + 
-  //             "gravida quam. Pellentesque habitant morbi tristique senectus " + 
-  //             "et netus et malesuada fames ac turpis egestas. Nulla lacinia " + 
-  //             "iaculis porttitor. Pellentesque interdum pulvinar mauris in " + 
-  //             "posuere. Aliquam eget varius sapien, at luctus justo. " + 
-  //             "Proin consequat elit magna, id dignissim nibh efficitur " + 
-  //             "nec. In tincidunt, ipsum vel sagittis bibendum, magna nisi " + 
-  //             "bibendum dolor, et tristique neque turpis elementum ante. Morbi " + 
-  //             "scelerisque auctor tellus ac rhoncus. Aenean viverra libero suscipit " + 
-  //             "diam gravida, at ultrices dui bibendum. Aliquam eu sapien in mauris " + 
-  //             "scelerisque facilisis. Nunc volutpat auctor ante, ut fringilla leo congue " + 
-  //             "eu. Suspendisse luctus odio quam. In leo ligula, pellentesque a lacinia " + 
-  //             "sed, sollicitudin eu elit. Quisque in nulla odio.";
+  let desc = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. " + 
+              "Duis pretium porta purus, non sagittis neque ultrices at. " + 
+              "Quisque venenatis orci nibh, ac sollicitudin justo mollis vitae. " + 
+              "Maecenas nec risus arcu. Vestibulum nulla tellus, blandit in " + 
+              "hendrerit id, facilisis nec nisl. In odio quam, lacinia sed " + 
+              "turpis sed, vehicula auctor est. Aliquam sed congue arcu, sit " + 
+              "amet varius orci. Fusce porttitor vitae sem vel iaculis. Fusce " + 
+              "elementum ipsum et consectetur scelerisque. Nulla tincidunt " + 
+              "pellentesque nisl, a vestibulum neque condimentum eu. Donec " + 
+              "purus lectus, tristique vel consectetur quis, eleifend nec velit. " + 
+              "Mauris tempor mattis neque, vel imperdiet erat. Vestibulum a " + 
+              "gravida quam. Pellentesque habitant morbi tristique senectus " + 
+              "et netus et malesuada fames ac turpis egestas. Nulla lacinia " + 
+              "iaculis porttitor. Pellentesque interdum pulvinar mauris in " + 
+              "posuere. Aliquam eget varius sapien, at luctus justo. " + 
+              "Proin consequat elit magna, id dignissim nibh efficitur " + 
+              "nec. In tincidunt, ipsum vel sagittis bibendum, magna nisi " + 
+              "bibendum dolor, et tristique neque turpis elementum ante. Morbi " + 
+              "scelerisque auctor tellus ac rhoncus. Aenean viverra libero suscipit " + 
+              "diam gravida, at ultrices dui bibendum. Aliquam eu sapien in mauris " + 
+              "scelerisque facilisis. Nunc volutpat auctor ante, ut fringilla leo congue " + 
+              "eu. Suspendisse luctus odio quam. In leo ligula, pellentesque a lacinia " + 
+              "sed, sollicitudin eu elit. Quisque in nulla odio.";
 
   let countryDesc = this.document.getElementById('countryDescription');
   // countryDesc.innerText = desc;
-  countryDesc.innerText = "";
 
   createImageSlider();
   imageInterval = setInterval(changeSlide, 5000);
@@ -109,7 +108,7 @@ function formatSliderNavigation(){
   document.querySelectorAll('.sliderBtn').forEach(btn=>{
     btn.style.backgroundColor = colors.colorDarkAccent;
     btn.style.border = '1px solid ' + colors.colorDarkAccent;
-    btn.style.opacity = '0.7';
+    btn.style.opacity = '0.9';
   });
   document.getElementById('labelRadio' + activeSlide).style.opacity = '1';
   document.getElementById('labelRadio' + activeSlide).style.backgroundColor = colors.colorLightAccent;
