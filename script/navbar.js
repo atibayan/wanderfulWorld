@@ -7,8 +7,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
   document.querySelectorAll('.navlinkbtn').forEach(
     link => {
-      console.log(link.href, window.location.href)
-      if(link.href === window.location.href){
+      if(window.location.href.startsWith(link.href)){
         link.setAttribute('aria-current', 'page');
       }
     })

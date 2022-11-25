@@ -34,6 +34,20 @@ function populateComments(){
   }
 }
 
+function getCssPropertyForRule(rule, prop) {
+  var sheets = document.styleSheets;
+  var slen = sheets.length;
+  for(var i=0; i<slen; i++) {
+      var rules = document.styleSheets[i].cssRules;
+      var rlen = rules.length;
+      for(var j=0; j<rlen; j++) {
+          if(rules[j].selectorText == rule) {
+              return rules[j].style[prop];
+          }
+      }
+  }
+}
+
 
 function formatClickEmoji(){
   let radios = document.querySelectorAll("input[type='radio']");
@@ -42,17 +56,33 @@ function formatClickEmoji(){
     {
       document.getElementById('emoji'+(i+1)).style.transform = 'translateY(10%)';
       document.getElementById('emoji7').innerText = radios[i].value.toUpperCase();
+      document.getElementById('emoji7').style.opacity = '1';
+      break; // means I already saw checked radio and appllied styles
     }
     else
     {
-      document.getElementById('emoji'+(i+1)).style.transform = 'translateY(50%)';
+      document.getElementById('emoji'+(i+1)).style.transform = '';
     }
+    // for resetting emoji7 styles
+    document.getElementById('emoji7').style.opacity = '';
+    document.getElementById('emoji7').innerText =
+      String.fromCodePoint(0x2B50) +
+      String.fromCodePoint(0x2B50) +
+      String.fromCodePoint(0x2B50) +
+      String.fromCodePoint(0x2B50) +
+      String.fromCodePoint(0x2B50);
   }
 }
 
 function addComment(form){
   if(validateForm(form))
   {
+    let commentContainer = document.getElementById('commentContainer');
+    if(commentContainer.childElementCount >= MAX_COMMENT){
+      //remove last line as max comments limit is 17 TODO: make dynamic comments count
+      commentContainer.removeChild(commentContainer.lastChild);
+    }
+
     let name = form.elements['fname'];
     let country = form.elements['country'];
     let rates = form.elements['rate'];
@@ -71,12 +101,14 @@ function addComment(form){
     let from = document.createElement('p');
     from.style.textAlign = 'right';
     from.innerText = '- ' + name.value;
-
     article.append(emojiBg, heading, citeText, from);
-    let commentContainer = document.getElementById('commentContainer');
     commentContainer.prepend(article);
+    
     styleComments();
     arrangeComments();
+    let formDiv = document.getElementsByTagName('form')[0];
+    formDiv.reset();
+    formatClickEmoji();
   }
 }
 
@@ -157,18 +189,12 @@ function validateRate(form){
 
 function validateStory(form){
   let story = form.elements['story'];
-  let wordCount = story.value.split(' ');
-  console.log(wordCount.length);
   if(story.validity.valueMissing){
     story.setCustomValidity("Share a couple of words please " + String.fromCodePoint(0x1F92A));
     return false;
   }
-  else if(wordCount.length < 50){
-    story.setCustomValidity("You're almost there! Share a few more insights. We'd love to hear more from you.");
-    return false;
-  }
-  else if (wordCount.length > 100){
-      story.setCustomValidity("Oops! Information overload... Please make it shorter  " + String.fromCodePoint(0x1F92A));
+  else if (story.value.split(' ') > 50){
+      story.setCustomValidity("Oops! Information overload... Please make your story concise  " + String.fromCodePoint(0x1F92A));
       return false;
   }
   else{

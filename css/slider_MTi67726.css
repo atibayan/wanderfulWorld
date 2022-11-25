@@ -1,3 +1,8 @@
+:root {
+  --slider-width: 320px;
+  --slider-height: 200px;
+}
+
 #page1_h1{
   color: var(--color-laccent);
   font-size: var(--fs-l);
@@ -5,7 +10,7 @@
 }
 
 #containerOfAll{
-  width: 100%;
+  width: 95%;
   margin: var(--fs-m) auto;
   padding: var(--fs-s) var(--fs-m);
 }
@@ -51,7 +56,7 @@
   display: flex;
   justify-content: center;
   position: relative;
-  width: 40%;
+  width: 200px;
   margin: 0 auto;
   bottom: 40px;
   background-color: rgba(255, 255, 255, 0.2);
@@ -110,11 +115,15 @@
 
 #radio10:checked ~ .first {
   margin-left: calc(var(--slider-width) * -9);
-}
-
+} 
 
 /* LAYOUT IN TABLETS */
 @media only screen and (min-width: 768px){
+  :root{
+    --slider-width: 600px;
+    --slider-height: 375px;
+  }
+
   #containerOfAll{
     width: 80%;
   }

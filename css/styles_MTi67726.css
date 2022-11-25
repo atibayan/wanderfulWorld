@@ -7,9 +7,6 @@
   --p-s: clamp(0.3rem, 1vw, 0.5rem);
   --p-l: clamp(1rem, 1vw, 1.1rem);
 
-  --slider-width: 360px;
-  --slider-height: 225px;
-
   --color-light: white;
   --color-laccent: #66FCF1;
   --color-maccent: #45A29E;
@@ -97,11 +94,6 @@ footer {
 
 /* LAYOUT IN TABLETS */
 @media only screen and (min-width: 768px){
-  :root{
-    --slider-width: 600px;
-    --slider-height: 375px;
-  }
-
   .hero{
     align-items: flex-end;
   }

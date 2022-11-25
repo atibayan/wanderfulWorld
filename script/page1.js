@@ -4,56 +4,56 @@ var imageInterval;
 var activeSlide = 1;
 var sliderWidth = 600;
 
+const jsonAddr = 'https://atibayan.github.io/data.json'
+// const jsonAddr = './data.json'
+
 window.addEventListener('DOMContentLoaded', function(){
-  //let countries = ['thailand', 'paris', 'japan', 'spain', 'austria'];
-  //let picCountArr = [5,5,5,5,5];
-  //let countries_count = 5;
-  //let random = Math.floor(Math.random() * countries_count);
-  //targetCountry = countries[random];
-  //picCount = picCountArr[random];
-  targetCountry = 'thailand';
-  picCount = 8;
-  let header = this.document.getElementById('page1_h1');
-  header.innerText = targetCountry.toUpperCase();
+  const dataPromise = fetch(jsonAddr).then(results => results.json()).then(
+    (data) => {return data;}
+  ); // retrieves the json data from file and returns a Promise instance
 
-  let desc = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. " + 
-              "Duis pretium porta purus, non sagittis neque ultrices at. " + 
-              "Quisque venenatis orci nibh, ac sollicitudin justo mollis vitae. " + 
-              "Maecenas nec risus arcu. Vestibulum nulla tellus, blandit in " + 
-              "hendrerit id, facilisis nec nisl. In odio quam, lacinia sed " + 
-              "turpis sed, vehicula auctor est. Aliquam sed congue arcu, sit " + 
-              "amet varius orci. Fusce porttitor vitae sem vel iaculis. Fusce " + 
-              "elementum ipsum et consectetur scelerisque. Nulla tincidunt " + 
-              "pellentesque nisl, a vestibulum neque condimentum eu. Donec " + 
-              "purus lectus, tristique vel consectetur quis, eleifend nec velit. " + 
-              "Mauris tempor mattis neque, vel imperdiet erat. Vestibulum a " + 
-              "gravida quam. Pellentesque habitant morbi tristique senectus " + 
-              "et netus et malesuada fames ac turpis egestas. Nulla lacinia " + 
-              "iaculis porttitor. Pellentesque interdum pulvinar mauris in " + 
-              "posuere. Aliquam eget varius sapien, at luctus justo. " + 
-              "Proin consequat elit magna, id dignissim nibh efficitur " + 
-              "nec. In tincidunt, ipsum vel sagittis bibendum, magna nisi " + 
-              "bibendum dolor, et tristique neque turpis elementum ante. Morbi " + 
-              "scelerisque auctor tellus ac rhoncus. Aenean viverra libero suscipit " + 
-              "diam gravida, at ultrices dui bibendum. Aliquam eu sapien in mauris " + 
-              "scelerisque facilisis. Nunc volutpat auctor ante, ut fringilla leo congue " + 
-              "eu. Suspendisse luctus odio quam. In leo ligula, pellentesque a lacinia " + 
-              "sed, sollicitudin eu elit. Quisque in nulla odio.";
+  const populateText = () => { // access the object returned from promise
+    dataPromise.then((data) => {
+      let params = new URLSearchParams(this.window.location.search);
+      if(params.has('country')){ // means it was redirected from browse page
+        targetCountry = params.get('country');
+      }
+      else{ // means we will generate country at random
+        let random = Math.floor(Math.random() * Object.keys(data).length);
+        targetCountry = Object.keys(data)[random];
+      }
+      let header = this.document.getElementById('page1_h1');
+      header.innerText = targetCountry.toUpperCase();
 
-  let countryDesc = this.document.getElementById('countryDescription');
-  // countryDesc.innerText = desc;
+      let leadingText = data[targetCountry]["p1"][0]; //get the first letter of the p1
+      let p1Text = " " + data[targetCountry]["p1"].slice(1);
+      let quoteText = data[targetCountry]["quote"];
+      let p2Text = data[targetCountry]["p2"];
+      let span1 = document.getElementsByClassName('biggest')[0];
+      span1.innerText = leadingText;
+      let p1 = document.getElementsByClassName('p1')[0];
+      p1.innerText = p1Text;
+      let span2 = document.getElementsByClassName('bigger')[0];
+      span2.innerText = quoteText;
+      let p2 = document.getElementsByClassName('p2')[0];
+      p2.innerText = p2Text;
 
-  createImageSlider();
-  imageInterval = setInterval(changeSlide, 5000);
+      let pic_count = data["thailand"]['pic_count'];
+      createImageSlider(pic_count);
+      // cannot call the function changeslide(pic_count) directly so need to create anonymous func to call the method with params
+      imageInterval = setInterval(() => {changeSlide(pic_count)}, 5000);
+    });
+  }; 
+  populateText(); // need to call function to tell promise what to do when it fully completes
 });
 
 
-function createImageSlider(){
-  let width = sliderWidth * picCount;
+function createImageSlider(pic_count){
+  let width = sliderWidth * pic_count;
   let slides = document.getElementById('slides');
   slides.style.width = width + "px";
 
-  for(let i = 1; i <= picCount; i++){
+  for(let i = 1; i <= pic_count; i++){
     let radio = document.createElement('input');
     radio.type = 'radio';
     radio.name = 'radio-btn';
@@ -61,7 +61,7 @@ function createImageSlider(){
     slides.append(radio);
   }
 
-  for(let i = 1; i <= picCount; i++){
+  for(let i = 1; i <= pic_count; i++){
     let slideDiv = document.createElement('div');
     slideDiv.className = 'slide';
     if (i == 1)
@@ -76,27 +76,23 @@ function createImageSlider(){
 
   let navigationDiv = document.getElementById('navigation');
 
-  for(let i = 1; i <= picCount; i++){
+  for(let i = 1; i <= pic_count; i++){
     let label = document.createElement('label');
     label.for = "radio" + i;
     label.className = 'sliderBtn';
     label.id = 'labelRadio' + i;
     label.addEventListener('click', function(){
-      console.log(this.id);
       let radioId = this.id[this.id.length - 1]
-      console.log(radioId);
       activeSlide = radioId;
       formatSliderNavigation();
     });
     navigationDiv.append(label);
   }
-  document.getElementById('labelRadio' + activeSlide).style.opacity = '1';
   document.getElementById('labelRadio' + activeSlide).style.backgroundColor = colors.colorLightAccent;
-  document.getElementById('labelRadio' + activeSlide).style.border = '1px solid ' + colors.colorLightAccent;
 }
 
-function changeSlide(){
-  if(activeSlide >= picCount){
+function changeSlide(pic_count){
+  if(activeSlide >= pic_count){
     activeSlide = 0;
   }
   activeSlide++;
@@ -106,11 +102,7 @@ function changeSlide(){
 function formatSliderNavigation(){
   document.getElementById('radio' + activeSlide).checked = true;
   document.querySelectorAll('.sliderBtn').forEach(btn=>{
-    btn.style.backgroundColor = colors.colorDarkAccent;
-    btn.style.border = '1px solid ' + colors.colorDarkAccent;
-    btn.style.opacity = '0.9';
+    btn.style.backgroundColor = '';
   });
-  document.getElementById('labelRadio' + activeSlide).style.opacity = '1';
   document.getElementById('labelRadio' + activeSlide).style.backgroundColor = colors.colorLightAccent;
-  document.getElementById('labelRadio' + activeSlide).style.border = '1px solid ' + colors.colorLightAccent;
 }

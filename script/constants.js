@@ -272,88 +272,88 @@ const dummyComments = [
     fname: "John Doe",
     country: "Spain",
     rate: "superb!",
-    story: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.'
+    // story: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.'
+    story: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.'
   },
   {
     fname: "Jane Doe",
     country: "Vietnam",
     rate: "it rocks!",
-    story: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.'
+    // story: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.'
+    story: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.'
   },
   {
     fname: "Jack Jill",
     country: "Austria",
     rate: "meh!",
-    story: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.'
+    // story: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.'
+    story: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.'
   },
   {
     fname: "Rapunzel",
     country: "France",
     rate: "pricey!",
-    story: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.'
+    // story: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.'
+    story: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.'
   },
   {
     fname: "Elizabeth Ann",
     country: "Italy",
     rate: "dontgo!",
-    story: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.'
+    // story: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.'
+    story: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.'
   },
   {
     fname: "Antonov",
     country: "Philippines",
     rate: "loveit!",
-    story: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.'
+    // story: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.'
+    story: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.'
   },
   {
     fname: "Miranda Bailey",
     country: "Turkey",
     rate: "it rocks!",
-    story: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.'
+    // story: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.'
+    story: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.'
   }
 ];
 
+const MAX_COMMENT = 11;
+
 const gridAreas2Col = [
-  '1 / 1 / 3 / 2',
+  '1 / 1 / 2 / 2',
   '1 / 2 / 2 / 3',
-  '2 / 2 / 3 / 3',
-  '3 / 2 / 6 / 3',
+  '2 / 1 / 3 / 3',
   '3 / 1 / 4 / 2',
-  '4 / 1 / 5 / 2',
-  '5 / 1 / 7 / 2',
+  '3 / 2 / 4 / 3',
+  '4 / 1 / 5 / 3',
+  '5 / 1 / 6 / 2',
+  '5 / 2 / 6 / 3',
+  '6 / 1 / 7 / 2',
   '6 / 2 / 7 / 3',
   '7 / 1 / 8 / 3',
-  '8 / 1 / 10 / 2',
+  '8 / 1 / 9 / 2',
   '8 / 2 / 9 / 3',
-  '9 / 2 / 10 / 3',
-  '10 / 2 / 12 / 3',
-  '10 / 1 / 13 / 2',
-  '12 / 2 / 13 / 3',
-  '13 / 2 / 15 / 3',
-  '13 / 1 / 14 / 2',
-  '14 / 1 / 15 / 2',
-  '15 / 1 / 16 / 3',
-  '16 / 1 / 18 / 2',
-  '16 / 2 / 17 / 3',
-  '17 / 2 / 18 / 3'
-]
+  '9 / 1 / 10 / 3',
+  '10 / 1 / 11 / 2',
+  '10 / 2 / 11 / 3',
+  '11 / 1 / 12 / 3'
+];
 
 const gridAreas3Col = [
   '1 / 1 / 2 / 2',
-  '1 / 3 / 3 / 4',
   '1 / 2 / 2 / 3',
+  '1 / 3 / 3 / 4',
   '2 / 1 / 3 / 3',
-  '3 / 1 / 5 / 2',
+  '3 / 1 / 4 / 2',
   '3 / 2 / 4 / 4',
-  '4 / 2 / 6 / 3',
-  '5 / 1 / 6 / 2',
+  '4 / 1 / 5 / 3',
   '4 / 3 / 6 / 4',
-  '6 / 1 / 8 / 2',
-  '7 / 2 / 8 / 3',
-  '8 / 2 / 9 / 3',
-  '8 / 1 / 9 / 2',
-  '7 / 3 / 9 / 4',
-  '10 / 1 / 11 / 2',
-  '9 / 1 / 10 / 3',
-  '10 / 2 / 11 / 3',
-  '9 / 3 / 11 / 4'
-]
+  '5 / 1 / 6 / 2',
+  '5 / 2 / 6 / 3',
+  '6 / 1 / 7 / 2',
+  '6 / 2 / 7 / 4'
+];
+
+
