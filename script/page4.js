@@ -26,7 +26,6 @@ function populateComments(){
     citeText.innerText = dComment.story;
 
     let from = document.createElement('p');
-    from.style.textAlign = 'right';
     from.innerText = '- ' + dComment.fname;
 
     article.append(emojiBg, heading, citeText, from);

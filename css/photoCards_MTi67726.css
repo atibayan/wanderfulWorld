@@ -29,7 +29,6 @@
   border-radius: 10px;
 }
 
-
 .image > img:hover {
   opacity: 1;
 }
@@ -52,12 +51,12 @@
 }
 
 .image .details > * {
-  font-size: 2.5rem;
+  font-size: var(--fs-s);
 }
 
 .image .details h2 {
   margin: 5px 40px;
-  font-size: 5em;
+  font-size: var(--fs-m);
   text-transform: uppercase;
   transition: 0.5 s;
   transition-property: transform;
@@ -73,19 +72,8 @@
   opacity: 0;
 }
 
-
-/* LAYOUT IN TABLETS */
+/* LAYOUT IN DEVICES BIGGER THAN IPHONE SE */
 @media only screen and (min-width: 768px){
-
-}
-
-/* LAYOUT IN SEMI WIDE OR DESKTOP */
-@media only screen and (min-width: 889px){
-
-}
-
-/* LAYOUT IN WIDE SCREEN */
-@media only screen and (min-width: 1200px) {
   .row {
     width: 80%;
   }
@@ -95,22 +83,9 @@
     max-width: 350px;
   }
 
-  .image .details {
-    height: 70px;
-    width: 350px;
-    bottom: 70px;
-  }
-
   .image:hover .details {
-    height: 250px;
-    bottom: 250px;
+    height: 60%;
+    bottom: 60%;
   }
 
-  .image .details > * {
-    font-size: 1em;
-  }
-
-  .image .details h2 {
-    font-size: 2em;
-  }
 }
