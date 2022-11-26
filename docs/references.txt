@@ -28,6 +28,16 @@ https://stackoverflow.com/questions/58071475/losing-hover-and-active-styles-in-h
 
 https://flaviocopes.com/urlsearchparams/ // how to extract query parameters from url
 
+https://www.w3schools.com/tags/ref_urlencode.ASP#:~:text=URLs%20cannot%20contain%20spaces.,(%2B)%20sign%20or%20with%20%20. // space in url query params
+
+https://www.freecodecamp.org/news/how-to-read-json-file-in-javascript/ //reading json files
+
+https://dev.to/ramonak/javascript-how-to-access-the-return-value-of-a-promise-object-1bck //accessing object from Promise return
+
+https://stackoverflow.com/questions/35722324/how-to-select-nth-item-inside-the-object //getting all keys of a json object
+
+https://stackoverflow.com/questions/457826/pass-parameters-in-setinterval-function //calling parametrized function in setInterval
+
 inspirations
 
 https://www.youtube.com/watch?v=rg7Fvvl3taU&ab_channel=KevinPowell
