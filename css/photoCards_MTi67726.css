@@ -60,13 +60,14 @@
 .redirectBtn{
   padding: 2px 5px;
   margin-top: 10px;
-  background-image: linear-gradient(var(--color-maccent), var(--color-laccent), var(--color-maccent));
+  background-color: var(--color-laccent);
   color: var(--color-dark);
   font-size: var(--fs-s);
   border: 0;
-  border-radius: 5px;
+  border-radius: 3px;
   display: inline-block;
   cursor: pointer;
+  font-weight: 500;
 }
 
 /* LAYOUT IN DEVICES BIGGER THAN IPHONE SE */

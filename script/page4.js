@@ -11,6 +11,7 @@ window.addEventListener('DOMContentLoaded', function(){
   for(let i = 0; i < radios.length; i++){
     radios[i].addEventListener('click', formatClickEmoji);
   }
+  this.document.querySelector("input[type='reset']").addEventListener('click', resetForm)
 });
 
 function populateComments(){
@@ -106,10 +107,15 @@ function addComment(form){
     
     styleComments();
     arrangeComments();
-    let formDiv = document.getElementsByTagName('form')[0];
-    formDiv.reset();
-    formatClickEmoji();
+    resetForm();
   }
+}
+
+function resetForm(){
+  let formDiv = document.getElementsByTagName('form')[0];
+  formDiv.reset();
+  formatClickEmoji();
+  document.querySelectorAll("input[type='reset']").focus();
 }
 
 function constructHeading(country, rate){

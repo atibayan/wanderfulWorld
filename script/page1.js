@@ -5,7 +5,6 @@ var activeSlide = 1;
 var sliderWidth = 600;
 
 const jsonAddr = 'https://atibayan.github.io/data.json'
-// const jsonAddr = './data.json'
 
 window.addEventListener('DOMContentLoaded', function(){
   const dataPromise = fetch(jsonAddr).then(results => results.json()).then(

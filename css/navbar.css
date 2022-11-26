@@ -66,6 +66,28 @@
   background-color: var(--color-laccent);
 }
 
+
+#topBtn {
+  display: none;
+  position: fixed;
+  bottom: 10%;
+  right: 10%;
+  z-index: 1;
+  background-color: var(--color-laccent);
+  color: var(--color-dark);
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 3px;
+  font-size: var(--fs-s);
+  font-weight: 500;
+  border: 0;
+}
+
+#topBtn:hover {
+  background-color: var(--color-daccent);
+  color: var(--color-laccent);
+}
+
 @media (max-width: 800px) {
   .navbar {
       flex-direction: column;
