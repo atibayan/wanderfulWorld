@@ -1,16 +1,7 @@
 var targetCountry;
-var picCount;
-var imageInterval;
 var activeSlide = 1;
-var sliderWidth = 600;
 
-const jsonAddr = 'https://atibayan.github.io/data.json'
-// const jsonAddr = './data.json'; // for local testing
 window.addEventListener('DOMContentLoaded', function(){
-  const dataPromise = fetch(jsonAddr).then(results => results.json()).then(
-    (data) => {return data;}
-  ); // retrieves the json data from file and returns a Promise instance
-
   const populateText = () => { // access the object returned from promise
     dataPromise.then((data) => {
       let params = new URLSearchParams(this.window.location.search);
@@ -40,7 +31,7 @@ window.addEventListener('DOMContentLoaded', function(){
       let pic_count = data[targetCountry]['pic_count'];
       createImageSlider(pic_count);
       // cannot call the function changeslide(pic_count) directly so need to create anonymous func to call the method with params
-      imageInterval = setInterval(() => {changeSlide(pic_count)}, 5000);
+      let imageInterval = setInterval(() => {changeSlide(pic_count)}, 5000);
     });
   }; 
   populateText(); // need to call function to tell promise what to do when it fully completes
@@ -48,7 +39,7 @@ window.addEventListener('DOMContentLoaded', function(){
 
 
 function createImageSlider(pic_count){
-  let width = sliderWidth * pic_count;
+  let width = 600 * pic_count;
   let slides = document.getElementById('slides');
   slides.style.width = width + "px";
 
@@ -74,7 +65,7 @@ function createImageSlider(pic_count){
   }
 
   let navigationDiv = document.getElementById('navigation');
-  navigationDiv.parentElement.style.width = 17 * picCount + 10;
+  navigationDiv.parentElement.style.width = 17 * pic_count + 10;
   for(let i = 1; i <= pic_count; i++){
     let label = document.createElement('label');
     label.for = "radio" + i;
