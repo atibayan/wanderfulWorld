@@ -1,5 +1,5 @@
-// const jsonAddr = 'https://atibayan.github.io/data.json'
-const jsonAddr = './data.json'  // for local testing
+const jsonAddr = 'https://atibayan.github.io/data.json'
+// const jsonAddr = './data.json'  // for local testing
 const dataPromise = fetch(jsonAddr).then(results => results.json()).then(
   (data) => {return data;}
 ); // retrieves the json data from file and returns a Promise instance
