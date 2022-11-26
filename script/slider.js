@@ -4,8 +4,8 @@ var imageInterval;
 var activeSlide = 1;
 var sliderWidth = 600;
 
-const jsonAddr = 'https://atibayan.github.io/data.json'
-
+// const jsonAddr = 'https://atibayan.github.io/data.json'
+const jsonAddr = './data.json';
 window.addEventListener('DOMContentLoaded', function(){
   const dataPromise = fetch(jsonAddr).then(results => results.json()).then(
     (data) => {return data;}
@@ -37,7 +37,7 @@ window.addEventListener('DOMContentLoaded', function(){
       let p2 = document.getElementsByClassName('p2')[0];
       p2.innerText = p2Text;
 
-      let pic_count = data["thailand"]['pic_count'];
+      let pic_count = data[targetCountry]['pic_count'];
       createImageSlider(pic_count);
       // cannot call the function changeslide(pic_count) directly so need to create anonymous func to call the method with params
       imageInterval = setInterval(() => {changeSlide(pic_count)}, 5000);

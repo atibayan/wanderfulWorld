@@ -136,6 +136,9 @@
 
 /* LAYOUT IN WIDE SCREEN */
 @media only screen and (min-width: 1200px) {
+  #page1_h1{
+    margin-top: 100px;
+  }
 
   #sliderContainer{
     float: left;
@@ -143,6 +146,6 @@
   }
 
   #containerOfAll{
-    width: 50%;
+    width: 55%;
   }
 }
