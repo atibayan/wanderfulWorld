@@ -1,6 +1,6 @@
 window.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.image > img').forEach(img => {
-    img.addEventListener('click', disableDetails, false);
+    img.addEventListener('click', disableDetails);
   });
 });
 
