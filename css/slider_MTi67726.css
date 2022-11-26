@@ -52,11 +52,17 @@
   height: auto;
 }
 
+#navigation-container{
+  width: 146px;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+
 #navigation {
   display: flex;
   justify-content: center;
   position: relative;
-  width: 200px;
   margin: 0 auto;
   bottom: 40px;
   background-color: rgba(255, 255, 255, 0.2);

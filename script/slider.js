@@ -74,7 +74,7 @@ function createImageSlider(pic_count){
   }
 
   let navigationDiv = document.getElementById('navigation');
-
+  navigationDiv.parentElement.style.width = 17 * picCount + 10;
   for(let i = 1; i <= pic_count; i++){
     let label = document.createElement('label');
     label.for = "radio" + i;
