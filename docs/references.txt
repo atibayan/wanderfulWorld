@@ -1,0 +1,20 @@
+Additional References
+1.	https://www.w3schools.com/howto/howto_js_get_current_window.asp //current screen size from js
+2.	https://developer.mozilla.org/en-US/docs/Web/CSS/clamp //clamp for responsive fonts
+3.	https://cssgrid-generator.netlify.app/  //helper for defining grid areas
+4.	https://www.geeksforgeeks.org/which-html-attribute-is-used-to-justify-the-content/#:~:text=The%20HTML%20attribute%20is%20used,the%20aligned%20attribute%20as%20justified. //justified alignment
+5.	https://stackoverflow.com/questions/58071475/losing-hover-and-active-styles-in-html-when-change-button-background-in-javascri // problem in emoji hover not applied after change
+6.	https://flaviocopes.com/urlsearchparams/ // how to extract query parameters from url
+7.	https://www.w3schools.com/tags/ref_urlencode.ASP#:~:text=URLs%20cannot%20contain%20spaces.,(%2B)%20sign%20or%20with%20%20. // space in url query params
+8.	https://www.freecodecamp.org/news/how-to-read-json-file-in-javascript/ //reading json files
+9.	https://dev.to/ramonak/javascript-how-to-access-the-return-value-of-a-promise-object-1bck //accessing object from Promise return
+10.	https://stackoverflow.com/questions/35722324/how-to-select-nth-item-inside-the-object //getting all keys of a json object
+11.	https://stackoverflow.com/questions/457826/pass-parameters-in-setinterval-function //calling parametrized function in setInterval
+
+Inspirations
+These are some of the tutorials I watched and got inspiration from. Note that I didn’t copy their code whatsoever. I focused more on making dynamic content through JS and tweaking what they taught to match the overall aesthetic of the site. I learned a lot from them though. 😊
+1.	https://www.youtube.com/watch?v=rg7Fvvl3taU&ab_channel=KevinPowell
+2.	https://www.youtube.com/watch?v=HpjW9eaFLIg&ab_channel=CodinginPublic
+3.	https://www.youtube.com/watch?v=At4B7A4GOPg&ab_channel=WebDevSimplified
+4.	https://www.youtube.com/watch?v=t5zFfDdvApE&ab_channel=HaverikaKrishna
+5.	https://www.youtube.com/watch?v=0wvrlOyGlq0&ab_channel=CodingSnow // inspiration for image slider but this tutorial is not dynamic enough for my usecase so I converted the idea to dynamic js slider
