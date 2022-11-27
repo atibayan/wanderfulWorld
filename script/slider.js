@@ -57,10 +57,10 @@ function createImageSlider(pic_count){
     if (i == 1)
       slideDiv.classList.add('first')
     let img = document.createElement('img');
-    let imgSrcCountry = targetCountry.replace(" ", "%20");
+    let imgSrcCountry = targetCountry.replace(" ", "_");
     let src = "images/" + imgSrcCountry +"/" + i + ".JPG";
     img.src = src;
-    img.setAttribute('alt', targetCountry + i + ".JPG");
+    img.setAttribute('alt', imgSrcCountry + i + ".JPG");
     slideDiv.append(img)
     slides.append(slideDiv)
   }
