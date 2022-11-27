@@ -113,13 +113,3 @@ footer {
     margin-left: var(--p-l);
   }
 }
-
-/* LAYOUT IN SEMI WIDE OR DESKTOP */
-@media only screen and (min-width: 889px){
-
-}
-
-/* LAYOUT IN WIDE SCREEN */
-@media only screen and (min-width: 1200px) {
-
-}

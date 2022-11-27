@@ -115,7 +115,6 @@ function resetForm(){
   let formDiv = document.getElementsByTagName('form')[0];
   formDiv.reset();
   formatClickEmoji();
-  document.querySelectorAll("input[type='reset']").focus();
 }
 
 function constructHeading(country, rate){
