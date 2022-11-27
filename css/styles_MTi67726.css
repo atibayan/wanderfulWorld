@@ -40,7 +40,6 @@ body {
   height: 90vh;
   display: flex;
   justify-content: left;
-  /* align-items: flex-end;  !!!!!!!!!!!!!!!!!!!!!!!*/
   align-items: center;
   grid-row: 2;
 }
@@ -60,6 +59,7 @@ body {
   font-size: var(--fs-s);
   display: block;
   max-width: 70vw;
+  line-height: var(--fs-l);
 }
 
 .wander {
@@ -67,10 +67,21 @@ body {
 }
 
 iframe {
-  /* width: 480;
-  height: 270; */
   width: 336;
   height: 189;
+}
+
+.start {
+  background-color: var(--color-laccent);
+  color: var(--color-daccent);
+  padding: 5px 10px;
+  text-decoration: none;
+  border-radius: 10px;
+}
+
+.start:hover {
+  background-color: var(--color-daccent);
+  color: var(--color-laccent);
 }
 
 /*PAGE 2*/
