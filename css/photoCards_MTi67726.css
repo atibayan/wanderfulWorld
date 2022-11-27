@@ -1,3 +1,9 @@
+h1 {
+  color: var(--color-laccent);
+  font-size: var(--fs-l);
+  margin-top: 10px;
+}
+
 .row {
   width: 100%;
   margin: 0px auto;
@@ -57,7 +63,7 @@
   opacity: 0;
 }
 
-.redirectBtn{
+.redirectBtn, #sortBtn{
   padding: 2px 5px;
   margin-top: 10px;
   background-color: var(--color-laccent);
@@ -70,10 +76,16 @@
   font-weight: 500;
 }
 
+#sortBtn {
+  margin-left: 30px;
+  padding: 7px 10px;
+  align-self: center;
+}
+
 /* LAYOUT IN DEVICES BIGGER THAN IPHONE SE */
 @media only screen and (min-width: 768px){
   .row {
-    width: 80%;
+    width: 70%;
   }
 
   .image {

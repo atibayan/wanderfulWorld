@@ -1,14 +1,45 @@
 window.addEventListener('DOMContentLoaded', () => {
-  createPhotoCards();
-  document.querySelectorAll('.image > img').forEach(img => {
-    img.addEventListener('click', disableDetails);
-  });
+  let unsorted_countries = [
+    'spain',
+    'belgium',
+    'philippines',
+    'south korea',
+    'thailand',
+    'japan',
+    'italy',
+    'france',
+    'czech republic',
+    'germany',
+    'poland',
+    'switzerland'
+  ];
+  let countries = unsorted_countries.slice().sort();
+  createPhotoCards(unsorted_countries);
+  let sort = document.getElementById('sortBtn');
+  sort.addEventListener('click', () => {
+    sort.classList.toggle('mystyle');
+    if(sort.classList.contains('mystyle')){
+      sort.innerText = 'Unsort';
+      sortChildren(countries.sort());
+    }
+    else{
+      sort.innerText = 'Sort';
+      sortChildren(unsorted_countries);
+    }
+  })
 });
+
+function isTouchDevice() {
+  return (('ontouchstart' in window) ||
+     (navigator.maxTouchPoints > 0) ||
+     (navigator.msMaxTouchPoints > 0));
+}
 
 function disableDetails(evt){
   // there is no hover in mobile devices so implement a way to hide the details on
   // click of the image
-  if(window.screen.width <= 550 || window.innerWidth <= 550){
+  // if(window.screen.width <= 550 || window.innerWidth <= 550){
+  if(isTouchDevice()){
     let detailDiv = evt.target.nextElementSibling
     let hiddenParagrah = evt.target.nextElementSibling.children[1];
     detailDiv.classList.toggle('mystyle');
@@ -25,25 +56,10 @@ function disableDetails(evt){
   }
 }
 
-function createPhotoCards(){
-  let countries = [
-    'spain',
-    'belgium',
-    'philippines',
-    'south korea',
-    'thailand',
-    'japan',
-    'italy',
-    'france',
-    'czech republic',
-    'germany',
-    'poland',
-    'switzerland'
-  ];
-
+function createPhotoCards(countries){
   const populateDivs = () => {
     dataPromise.then((data) => {
-      let divRow = document.getElementsByClassName('row')[0];
+      let divRow = document.getElementsByClassName('row')[1];
       countries.forEach(country => {
         let divImage = document.createElement('div');
         divImage.className = 'image';
@@ -51,6 +67,7 @@ function createPhotoCards(){
         let img = document.createElement('img');
         img.setAttribute('src', data[country]["img_src"]);
         img.setAttribute('alt', data[country]["alt"]);
+        img.addEventListener('click', disableDetails);
     
         let divDetails = document.createElement('div');
         divDetails.className = 'details';
@@ -69,9 +86,7 @@ function createPhotoCards(){
         button.addEventListener('click', () => {
           let url = "page2_MTi67726.html?country=" + queryCountryParam;
           window.location.href = url
-        });
-        // button.onclick = "location.href='page2_MTi67726.html?country=" + queryCountryParam +"'";
-    
+        });    
         divDetails.append(h2, p, button);
         divImage.append(img, divDetails);
         divRow.append(divImage);
@@ -80,4 +95,22 @@ function createPhotoCards(){
   };
 
   populateDivs();
+}
+
+function sortChildren(countries){
+  let itemsArray = [];
+  let divs = document.getElementsByClassName('image');
+  for(let country of countries){
+    for (let imageDiv of divs){
+      if (imageDiv.lastChild.firstChild.innerText.toLowerCase() == country){
+        itemsArray.push(imageDiv);
+      }
+    }
+  }
+
+  let divRow = document.getElementsByClassName('row')[1];
+  divRow.innerHTML = '';
+  itemsArray.forEach(item => {
+    divRow.append(item);
+  });
 }
