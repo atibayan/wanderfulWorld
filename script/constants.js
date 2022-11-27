@@ -276,52 +276,45 @@ const countryList = [
 const dummyComments = [
   {
     fname: "John Doe",
-    country: "Spain",
+    country: "Istanbul",
     rate: "superb!",
-    // story: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.'
-    story: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.'
+    story: 'I will definitely visit Istanbul again. Hagia Sophia is a gem! Basilica Cistern did not disappoint. I love Simit!'
   },
   {
-    fname: "Jane Doe",
-    country: "Vietnam",
+    fname: "Adrian Clayton",
+    country: "Philippines",
     rate: "it rocks!",
-    // story: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.'
-    story: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.'
+    story: 'Philippines is a gem! I have tried Lechon in Cebu. Mingled with Tarsiers in Bohol. It is a great experience!'
   },
   {
-    fname: "Jack Jill",
+    fname: "Connor Tanner",
     country: "Austria",
     rate: "meh!",
-    // story: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.'
-    story: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.'
+    story: 'Stores in Austria is not convenient, especially for travelers outside of Europe. They are closing early. I was craving for soda and all the stores are closed around our hotel. Nevertheless, it was a good trip, specifically the Austrian Alps.'
   },
   {
-    fname: "Rapunzel",
+    fname: "Herman Miller",
     country: "France",
     rate: "pricey!",
-    // story: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.'
-    story: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.'
+    story: 'I have stayed in France for a few weeks, all I can say is that it is really one of the expensive destinations that I went to. You need to pay to use public washrooms. '
   },
   {
-    fname: "Elizabeth Ann",
+    fname: "Carol Sanders",
     country: "Italy",
     rate: "dontgo!",
-    // story: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.'
-    story: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.'
+    story: 'My rental car was broken into Tuscany. To make the matter worst, the rental company has no insurance covering for this kind of scenario. It was an unpleasant trip. '
   },
   {
-    fname: "Antonov",
-    country: "Philippines",
-    rate: "loveit!",
-    // story: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.'
-    story: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.'
-  },
-  {
-    fname: "Miranda Bailey",
-    country: "Turkey",
+    fname: "Anton Kirkland",
+    country: "Vietnam",
     rate: "it rocks!",
-    // story: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.'
-    story: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.'
+    story: 'I have spent a few weeks in Ho Chi Minh, stayed in an AirBnB accomodation. It was good experience to eat local food such as Pho and Banh Mi. We were able to do some thrift shopping in Ben Thanh. I was able to buy some things with a good deal. '
+  },
+  {
+    fname: "Taylor Brand",
+    country: "Spain",
+    rate: "loveit!",
+    story: 'I have been able to see the Sagrada Familia. It felt surreal. Been able to tour around Barcelona for a few days. Then, we went to Valencia in one of their wieries and was able to try excellent wines. '
   }
 ];
 
