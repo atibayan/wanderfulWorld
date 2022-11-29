@@ -82,6 +82,12 @@ h1 {
   align-self: center;
 }
 
+.redirectBtn:hover,
+#sortBtn:hover {
+  background-color: var(--color-daccent);
+  color: var(--color-laccent);
+}
+
 /* LAYOUT IN DEVICES BIGGER THAN IPHONE SE */
 @media only screen and (min-width: 768px){
   .row {

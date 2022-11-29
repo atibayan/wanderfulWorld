@@ -103,6 +103,12 @@ input[type='reset'] {
   padding: 2px;
 }
 
+input[type='submit']:hover,
+input[type='reset']:hover {
+  background-color: var(--color-dark);
+  color: var(--color-laccent);
+}
+
 /* START EMOJI RATING STYLES */
 .emoji > label {
   display: inline-block;
