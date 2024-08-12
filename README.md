@@ -1,2 +1,3 @@
-# atibayan.github.io
- Requirement for CSIS1280 Fall 2022
+# WanderfulWorld
+
+Collection of travel pictures, recommends next country to visit
